@@ -1003,6 +1003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodSprite: {fileID: 21300000, guid: c3bd1ffb8de1fa441a845a659442868c, type: 3}
   bodySprite: {fileID: 21300000, guid: 699ec0eb3513a9e4d9ec52b08a8544ba, type: 3}
+  eatClip: {fileID: 8300000, guid: fbadfbb2df4fc0c4d91d203810b5a6c9, type: 3}
+  gameOverClip: {fileID: 8300000, guid: d0d261573b6f5634393d7863870d266a, type: 3}
 --- !u!4 &1859347101
 Transform:
   m_ObjectHideFlags: 0

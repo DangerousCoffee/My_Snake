@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\popupHandler.cs" />
     <Compile Include="Assets\Scripts\ScoreHandler.cs" />
     <Compile Include="Assets\Scripts\Snake.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\World_Sprite.cs" />
     <None Include="Assets\CodeMonkey\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

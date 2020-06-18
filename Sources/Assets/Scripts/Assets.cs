@@ -9,6 +9,9 @@ public class Assets : MonoBehaviour
     public Sprite foodSprite;
     public Sprite bodySprite;
 
+    public AudioClip eatClip;
+    public AudioClip gameOverClip;
+
     private void Awake()
     {
         assets = this;

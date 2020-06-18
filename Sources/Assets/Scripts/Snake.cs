@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 public class Snake : MonoBehaviour
@@ -31,7 +32,7 @@ public class Snake : MonoBehaviour
         snake = this;
         snake.gridPos = new Vector2Int(1, 1);
         snake.gridDirection = Direction.Right;
-        snake.moveTimerMax = .25f;
+        snake.moveTimerMax = .15f;
         snake.moveTimer = snake.moveTimerMax;
         snake.bodyPositions = new List<SnakeMovePos>();
         snake.bodyObjects = new List<SnakeBodySegment>();
@@ -82,6 +83,7 @@ public class Snake : MonoBehaviour
 
             if (Field.field.checkFood(snake.gridPos))
             {
+                SoundManager.playEatSound();
                 snake.bodySize++;
                 snake.addBody();
             }
@@ -92,14 +94,14 @@ public class Snake : MonoBehaviour
             }
 
             foreach(SnakeMovePos snakeMovePos in snake.bodyPositions)
-                     {
-                         if (snake.gridPos == snakeMovePos.getGridPos())
-                         {
-                             snake.gameOverFlag = true;
-                    SceneManager.LoadScene("MainMenu");
-                         }
-                     }
-
+            {
+                if (snake.gridPos == snakeMovePos.getGridPos())
+                {
+                    SoundManager.playDeathSound();
+                    Invoke("GameOver", 5);
+                    snake.gameOverFlag = true;
+                }
+            }
             transform.position = new Vector3(gridPos.x, gridPos.y);
             transform.eulerAngles = new Vector3(0, 0, angleFromVector(directionVector()) - 90);
 
@@ -185,6 +187,11 @@ public class Snake : MonoBehaviour
             gridPosList.Add(snakeMovePos.getGridPos());
         }
         return gridPosList;
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 

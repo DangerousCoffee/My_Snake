@@ -98,7 +98,7 @@ public class Snake : MonoBehaviour
                 if (snake.gridPos == snakeMovePos.getGridPos())
                 {
                     SoundManager.playDeathSound();
-                    Invoke("GameOver", 5);
+                    Game_script.gameOver();
                     snake.gameOverFlag = true;
                 }
             }
@@ -188,13 +188,6 @@ public class Snake : MonoBehaviour
         }
         return gridPosList;
     }
-
-    private void GameOver()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-
 
     private class SnakeBodySegment
     {

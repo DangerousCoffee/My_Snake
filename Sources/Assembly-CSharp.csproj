@@ -63,34 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CodeMonkey\Assets.cs" />
-    <Compile Include="Assets\CodeMonkey\CMDebug.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\Button_Sprite.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\Button_UI.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\ComponentActions.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\FunctionUpdater.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\UI_Bar.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\UI_BarMultiple.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\UI_Sprite.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\UI_TextComplex.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\UtilsClass.cs" />
-    <Compile Include="Assets\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\Scripts\Assets.cs" />
     <Compile Include="Assets\Scripts\ExitBtnHandler.cs" />
     <Compile Include="Assets\Scripts\Field.cs" />
-    <Compile Include="Assets\Scripts\FunctionTimer.cs" />
     <Compile Include="Assets\Scripts\Game_script.cs" />
+    <Compile Include="Assets\Scripts\HighscoreDisplay.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\LoaderCallbacks.cs" />
-    <Compile Include="Assets\Scripts\MenuHandler.cs" />
     <Compile Include="Assets\Scripts\PlayBtnHandler.cs" />
     <Compile Include="Assets\Scripts\popupHandler.cs" />
     <Compile Include="Assets\Scripts\ScoreHandler.cs" />
     <Compile Include="Assets\Scripts\Snake.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\World_Sprite.cs" />
-    <None Include="Assets\CodeMonkey\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/akdre/My_snake/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

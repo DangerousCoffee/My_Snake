@@ -25,7 +25,7 @@ public class Game_script : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MainMenu");
+            loadMainMenu();
         }
     }
 
@@ -52,5 +52,16 @@ public class Game_script : MonoBehaviour
     public static void resetScore()
     {
         score = 0;
+    }
+
+    public static void gameOver()
+    {
+        HighscoreDisplay.setNewHighscore(score);
+        handler.Invoke("loadMainMenu", 5);
+    }
+
+    private void loadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
